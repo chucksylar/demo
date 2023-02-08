@@ -45,9 +45,9 @@ app.post('/', async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        res.status(500).send({ error });
+        res.status(500).send({ error });12
     }
 });
 
-// app.listen(5001, () => console.log('Server is running on port http://localhost:5001'))
-app.listen(5001, '10.30.107.178');
+app.listen(5001, () => console.log('Server is running on port http://localhost:5001'))
+// app.listen(5001, '10.30.107.178');
