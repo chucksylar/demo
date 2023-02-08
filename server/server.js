@@ -12,14 +12,11 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const app = express()
-// const IP = require('ip');
 app.use(cors())
 app.use(express.json())
 
 
 app.get('/', async (req, res) => {
-    // const ipAddress = IP.address();
-    // res.send(ipAddress);
     res.status(200).send({
         message: 'Hello from GPT',
     })
@@ -45,7 +42,7 @@ app.post('/', async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        res.status(500).send({ error });12
+        res.status(500).send({ error });
     }
 });
 
