@@ -78,7 +78,8 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   // fetch data for server -> bot's response
-  const response = await fetch('https://gptdemo-mjnj.onrender.com', {
+  let url = 'http://localhost:5001'
+  const response = await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
