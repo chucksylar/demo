@@ -47,7 +47,13 @@ app.post('/', async (req, res) => {
                 {"role": "system", "content": "Your are a helpfile assistant."},
                 {"role": "user", "content": prompt},
             ],
-            max_tokens: 1000,
+            max_tokens: 3000,
+            temperature: 1.0,
+            top_p: 1.0,
+            n: 1,
+            stream: false,
+            presence_penalty: 0,
+            frequency_penalty: 0,
         })
         // console.log(response.data.choices);
         // console.log(response.data.choices[0]['message']['content']);
